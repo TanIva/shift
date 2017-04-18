@@ -203,7 +203,7 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     content: '';
     position: absolute;
     left: 29px;
-    top: -41px;
+    top: -40px;
     border: 21px solid transparent;
     border-bottom: 20px solid #FF3366;
 }
@@ -287,4 +287,41 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     padding-bottom: 20px;
     margin: 0 30px;
     text-align: center;
+}
+
+@media all and (orientation: landscape) and (max-width: 768px) {
+    .login_form{
+        top: 5%;
+    }
+    .login-button-enter {
+        margin: 23px auto 0;
+    }
+    img.logo {
+        margin: 0 auto 25px;
+    }
+    .order_menu {
+        width: 302px;
+        height: 100px;
+    }
+    .order_menu ul {
+        padding: 0;
+    }
+    .order_menu ul li {
+        display: inline-block;
+        width: 95px;
+    }
+    .order_menu ul li+li {
+        border-top: none;
+        border-left: 1px solid #fff;
+    }
+}
+@media all and (max-width: 768px) {
+    .exit {
+        margin-left: 15px;
+        padding-top: 15px;
+        margin-bottom: 0;
+    }
+    .order_menu {
+        bottom: calc(5% + 130px);
+    }
 }
