@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/flexboxgrid.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
@@ -30,6 +31,43 @@
             <div>הזמן נסיעה</div>
         </div>
 
+        <div class="steps step1 clicked">
+            <p class="title turquoise">בחרי יום</p>
+            
+            <div class="row">
+                <div class="col-xs-4 check-date cursor-pointer">
+                    <span class="choose-day-span">אחר</span>
+                    <div class="calendar"></div>
+                </div>
+                <div class="col-xs-4 check-date cursor-pointer checked">
+                    <span class="choose-day-span">מחר</span>
+                    <div class="date">30/01/17</div>
+                </div>
+                <div class="col-xs-4 check-date cursor-pointer">
+                    <span class="choose-day-span">היום</span>
+                    <div class="date">29/01/17</div>
+                </div>
+            </div>
+        </div>
+        <div class="steps step2">
+            <p class="title turquoise">בחר שעת הגעה לבני ציון</p>
+
+            <div class="choose-time">
+                <p>07:00</p>
+                <p class="main">08:00</p>
+                <p>09:00</p>
+            </div>
+        </div>
+
+        <div class="steps step3 active">
+            <p class="title turquoise">בחר שעת הגעה לבני ציון</p>
+
+            <div class="choose-time">
+                <p>07:00</p>
+                <p class="main">08:00</p>
+                <p>09:00</p>
+            </div>
+        </div>
 
     </div>
 </section>

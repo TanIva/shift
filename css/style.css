@@ -6,6 +6,9 @@
     font-family: 'OpenSansHebrewBold';
     src: url('../fonts/OpenSansHebrew-Bold.ttf');
 }
+.cursor-pointer{
+    cursor: pointer;
+}
 .login_bg{
     background-image: url("../img/driving.jpg");
     background-repeat:no-repeat;
@@ -281,12 +284,87 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
 }
 .travel_form_header *{
     font-family: 'OpenSansHebrewBold', sans-serif;
+    font-size: 22px;
 }
 .travel_form_header{
     border-bottom: 1px solid;
     padding-bottom: 20px;
-    margin: 0 30px;
     text-align: center;
+}
+.steps{
+    text-align: center;
+    display: none;
+}
+.steps *{
+    font-size: 18px;
+}
+.turquoise{
+    color: #00FFFF;
+}
+.steps .title{
+    margin: 20px 0 30px;
+}
+.steps .choose-day-span{
+    font-family: 'OpenSansHebrewBold', sans-serif;
+    line-height: 36px;
+}
+.steps.step1{
+    display: block;
+}
+.steps.active{
+    display: block;
+}
+.steps.step1.clicked .check-date:not(.active) .choose-day-span{
+    font-family: 'OpenSansHebrewRegular', sans-serif;
+}
+.steps.step1.clicked .check-date.active .date{
+    color: #00FFFF;
+    font-family: 'OpenSansHebrewBold', sans-serif;
+}
+.steps.step1.clicked .check-date.checked .choose-day-span:after{
+    content: '';
+    background-image: url(../img/check.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px 18px;
+    width: 25px;
+    height: 34px;
+    position: absolute;
+}
+.steps .date{
+    color: #B3B3B3;
+}
+.steps.step1{
+    margin-top: 150px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: margin-top 2s, border 2s;
+    transition: margin-top 2s, border 2s;
+}
+.steps.step1.clicked{
+    margin-top: 0;
+    border-bottom: 1px solid #fff;
+}
+.steps.step1 .title{
+    -webkit-transition: all 2s;
+    transition: all 2s;
+}
+.steps.step1.clicked .title{
+    color: transparent;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+}
+.steps.step2{
+    margin-top: 100px;
+}
+.choose-time p{
+    font-family: 'OpenSansHebrewBold', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+.choose-time p.main{
+    font-size: 18px;
 }
 
 @media all and (orientation: landscape) and (max-width: 768px) {
