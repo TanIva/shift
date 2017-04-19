@@ -301,6 +301,13 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
 .turquoise{
     color: #00FFFF;
 }
+.calendar{
+    background-image: url("../img/calendar_small.png");
+    background-repeat:no-repeat;
+    height: 20px;
+    background-size: contain;
+    background-position: center;
+}
 .steps .title{
     margin: 20px 0 30px;
 }
@@ -366,7 +373,56 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
 .choose-time p.main{
     font-size: 18px;
 }
-
+.arrival_times{
+    border-bottom: 1px solid #fff;
+    padding: 2px 0 14px;
+}
+.arrival_times .arrival_title{
+    position: relative;
+}
+.arrival_times .arrival_title:before{
+    content: '';
+    background-image: url(../img/marker.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 22px;
+    width: 16px;
+    height: 22px;
+    position: absolute;
+    margin: auto;
+    left: -196px;
+    right: 0;
+}
+.arrival_times .arrival_time{
+    font-family: 'OpenSansHebrewBold', sans-serif;
+    position: relative;
+}
+.arrival_times .arrival_time span{
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    top: 25px;
+}
+.pink-btn{
+    background-color: #ff3366;
+    border: none;
+    width: 100%;
+    line-height: 48px;
+    cursor: pointer;
+    box-shadow: 4px 4px 6px 0 #000;
+}
+.pink-btn:hover{
+    background-color: #e01649;
+}
+.steps.step5 .pink-btn{
+    margin-top: 10%;
+    position: absolute;
+    bottom: 20px;
+    left: 24px;
+    right: 24px;
+    width: calc(100% - 48px);
+}
 @media all and (orientation: landscape) and (max-width: 768px) {
     .login_form{
         top: 5%;
@@ -392,8 +448,11 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
         border-top: none;
         border-left: 1px solid #fff;
     }
+    .travel_form {
+        max-width: 100%;
+    }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
     .exit {
         margin-left: 15px;
         padding-top: 15px;
@@ -401,5 +460,10 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     }
     .order_menu {
         bottom: calc(5% + 130px);
+    }
+    .travel_form {
+        background-color: rgba(20, 21, 14, 1);
+        top: 0;
+        bottom: 0;
     }
 }
