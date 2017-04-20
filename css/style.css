@@ -312,6 +312,7 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     margin: 20px 0 30px;
 }
 .steps .choose-day-span{
+    position: relative;
     font-family: 'OpenSansHebrewBold', sans-serif;
     line-height: 36px;
 }
@@ -334,9 +335,11 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 15px 18px;
-    width: 25px;
-    height: 34px;
+    width: 15px;
+    height: 18px;
     position: absolute;
+    top: 2px;
+    right: -20px;
 }
 .steps .date{
     color: #B3B3B3;
