@@ -365,6 +365,9 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     opacity: 0;
     margin: 0;
 }
+.steps.step1.clicked .date{
+    color: #fff;
+}
 .steps.step2{
     margin-top: 100px;
 }
@@ -372,9 +375,11 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     font-family: 'OpenSansHebrewBold', sans-serif;
     font-size: 16px;
     cursor: pointer;
+    height: 21px;
+    margin: 15px 0;
 }
-.choose-time p.main{
-    font-size: 18px;
+.choose-time p:hover{
+    font-size: 19px;
 }
 .arrival_times{
     border-bottom: 1px solid #fff;
