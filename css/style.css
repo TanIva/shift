@@ -375,11 +375,12 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     font-family: 'OpenSansHebrewBold', sans-serif;
     font-size: 16px;
     cursor: pointer;
-    height: 21px;
-    margin: 15px 0;
+
 }
 .choose-time p:hover{
-    font-size: 19px;
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: 0.1s;
 }
 .arrival_times{
     border-bottom: 1px solid #fff;
@@ -431,6 +432,18 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     right: 24px;
     width: calc(100% - 48px);
 }
+.last_login img.logo{
+    padding-top: 68px;
+}
+
+.login_final p{
+    font-family: 'OpenSansHebrewBold', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    direction: rtl;
+    text-align: center;
+    margin-top: 15vh;
+}
 @media all and (orientation: landscape) and (max-width: 768px) {
     .login_form{
         top: 5%;
@@ -458,6 +471,14 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     }
     .travel_form {
         max-width: 100%;
+    }
+    .last_login img.logo{
+        padding-top: 20px;
+    }
+
+    .login_final p{
+        font-size: 20px;
+        margin-top: 11vh;
     }
 }
 @media all and (max-width: 767px) {
