@@ -436,7 +436,12 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
 .last_login img.logo{
     padding-top: 68px;
 }
-
+.login_final{
+    display: none;
+}
+.login_final.active{
+    display: block;
+}
 .login_final p{
     font-family: 'OpenSansHebrewBold', sans-serif;
     font-size: 22px;
