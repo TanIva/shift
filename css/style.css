@@ -6,6 +6,10 @@
     font-family: 'OpenSansHebrewBold';
     src: url('../fonts/OpenSansHebrew-Bold.ttf');
 }
+@keyframes anim {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 .cursor-pointer{
     cursor: pointer;
 }
@@ -295,6 +299,7 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
 .steps{
     text-align: center;
     display: none;
+    animation: anim 0.35s;
 }
 .steps *{
     font-size: 18px;
@@ -322,6 +327,7 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
 }
 .steps.active{
     display: block;
+    animation: anim 0.35s;
 }
 .steps.step1.clicked .check-date:not(.active) .choose-day-span{
     font-family: 'OpenSansHebrewRegular', sans-serif;
@@ -372,16 +378,37 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
 .steps.step2{
     margin-top: 100px;
 }
+.choose-time h4{
+    font-weight: normal;
+}
 .choose-time p{
     font-family: 'OpenSansHebrewBold', sans-serif;
     font-size: 16px;
     cursor: pointer;
-
 }
 .choose-time p:hover{
     cursor: pointer;
     transform: scale(1.3);
     transition: 0.1s;
+}
+@keyframes top {
+    0% {margin-top: 100px;}
+    100% {margin-top: 0;}
+}
+@keyframes scale_active {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+.steps.step3.active{
+    margin-top: 0;
+    transition: margin 3s;
+}
+.steps.step3.active .arrival_times{
+    animation: scale_active 1s;
+}
+.steps.step3 .choose-time{
+    display: none;
+    opacity: 0;
 }
 .arrival_times{
     border-bottom: 1px solid #fff;
@@ -413,6 +440,7 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     right: 0;
     font-size: 14px;
     top: 25px;
+    opacity: 0;
 }
 .pink-btn{
     background-color: #ff3366;
@@ -432,6 +460,7 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     left: 24px;
     right: 24px;
     width: calc(100% - 48px);
+    animation: anim 1s;
 }
 .last_login img.logo{
     padding-top: 68px;
@@ -449,6 +478,37 @@ label.custom_label .checkbox:checked + .checkbox-custom::before {
     direction: rtl;
     text-align: center;
     margin-top: 15vh;
+}
+
+.steps.step6{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 41% 0;
+}
+
+.loader {
+    border: 12px solid rgba(255, 255, 255, 0.09);
+    border-radius: 50%;
+    border-top: 12px solid #ff3366;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: 30px auto 0;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 @media all and (orientation: landscape) and (max-width: 768px) {
     .login_form{
