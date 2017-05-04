@@ -33,12 +33,22 @@
             setTimeout(function() {
                 $('.steps.step3').removeAttr('style');
             }, 2000);
-            setTimeout(function() {
-                $('.steps.step3 .choose-time').css("display", "block");
-            }, 4000);
-            setTimeout(function() {
-                $('.steps.step3 .choose-time').css({"opacity": "1", "transition": "0.8s"});
-            }, 5000);
+
+            if($('.steps.step2').hasClass('edit')){
+                setTimeout(function() {
+                    $('.steps.step4').addClass('active');
+                }, 4800);
+                setTimeout(function() {
+                    $('.steps.step5').addClass('active');
+                }, 5500);
+            }else{
+                setTimeout(function() {
+                    $('.steps.step3 .choose-time').css("display", "block");
+                }, 4000);
+                setTimeout(function() {
+                    $('.steps.step3 .choose-time').css({"opacity": "1", "transition": "0.8s"});
+                }, 5000);
+            }
         });
 
         $('.steps.step3 .choose-time p').on('click', function() {
@@ -57,18 +67,21 @@
         });
 
         $('.steps.step3 .arrival_time').on('click', function() {
-            $('.steps.step5').css({"margin-top": "30px", "opacity": "0", "transition": "all 0.6s"});
-            $('.steps.step4').css({"margin-top": "30px", "opacity": "0", "transition": "all 0.8s"});
+            $('.steps.step5').css({"margin-top": "30px", "opacity": "0", "transition": "all 0.4s"});
+            $('.steps.step4').css({"margin-top": "20px", "opacity": "0", "transition": "all 0.6s"});
+            $('.steps.step3').css({"margin-top": "15px", "opacity": "0", "transition": "all 0.8s"});
 
             setTimeout(function() {
+                $('.steps.step3').removeClass('active').removeAttr('style');
                 $('.steps.step4').removeClass('active').removeAttr('style');
                 $('.steps.step5').removeClass('active').removeAttr('style');
-                $('.steps.step3 .choose-time').css("display", "block");
+                $('.steps.step2').addClass('active edit');
             }, 1000);
             setTimeout(function() {
-                $('.steps.step3 .choose-time').css({"opacity": "1", "transition": "0.8s"});
+                /*$('.steps.step3 .choose-time').css({"opacity": "1", "transition": "0.8s"});*/
             }, 1500);
         });
+
         $('.steps.step5 .btn').on('click', function() {
             $('.steps.step6').addClass('active');
         });
